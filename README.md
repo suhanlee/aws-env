@@ -82,6 +82,14 @@ You can access the rds server throught ssl
 ```
 $ mysql -h mycluster-primary.123456789012.us-east-1.rds.amazonaws.com --ssl-ca=[full path]rds-combined-ca-bundle.pem --ssl-verify-server-cert
 ```
+### initialize user, db
+```
+mysql> CREATE USER ‘user-name’@’%’ IDENTIFIED BY ‘password’;
+mysql> GRANT ALL PRIVILEGES ON *.* TO ‘user-name’@’%’;
+mysql> FLUSH PRIVILEGES;
+...
+mysql> CREATE DATABASE [db-name] DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+```
 
 ## rails
 create secret key and add env variable to eb (SECRET_KEY_BASE) on AWS EB Console
