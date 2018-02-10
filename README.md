@@ -49,4 +49,17 @@ Environment details for: [env-name]
   Updated: 2018-02-10 06:24:45.782000+00:00
 Printing Status:
 INFO: createEnvironment is starting.
+INFO: Using elasticbeanstalk-ap-northeast-2-782164292379 as Amazon S3 storage bucket for environment data.
+INFO: Created security group named: 
+INFO: Created security group named: 
+INFO: Created load balancer named: 
+INFO: Created Auto Scaling launch configuration named: 
+INFO: Created Auto Scaling group named: 
+INFO: Waiting for EC2 instances to launch. This may take a few minutes.
+INFO: Created Auto Scaling group policy named:
+INFO: Created Auto Scaling group policy named:
+INFO: Created CloudWatch alarm named: 
+INFO: Created CloudWatch alarm named: 
+INFO: Successfully launched environment: [env-name]
 ```
+
