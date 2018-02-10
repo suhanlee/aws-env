@@ -89,3 +89,11 @@ create secret key and add env variable to eb (SECRET_KEY_BASE) on AWS EB Console
 $ rake secret
 34216fa4947d75eeb2fa706c939cbea59e7624fe864e6e73c19231a8ef50407a84c5661a794719c07379c44809e05946621178b5d713b170b63fa8d781e791fc
 ```
+
+## etc
+### autoenv
+auto configuration when directory uses.
+```
+$ brew install autoenv
+$ echo "source $(brew --prefix autoenv)/activate.sh" >> ~/.bash_profile
+```
