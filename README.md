@@ -19,3 +19,16 @@ install awseb cli using pip
 ```
 $ pip install awsebcli --upgrade --user
 ```
+configurating aws account
+```
+$ aws configure
+AWS Access Key ID [****************AQOQ]: 
+AWS Secret Access Key [****************vqZK]: 
+Default region name [ap-northeast-2]: 
+Default output format [None]: json
+```
+initialize eb setup including region, language, keypair
+```
+$ cd [project-directory]
+$ eb init [project-name]
+```
