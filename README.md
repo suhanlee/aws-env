@@ -62,6 +62,19 @@ INFO: Created CloudWatch alarm named:
 INFO: Created CloudWatch alarm named: 
 INFO: Successfully launched environment: [env-name]
 ```
+## rds
+### Aurora (https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/AuroraMySQL.Security.html)
+We recommend the MariaDB Connector/J client as a client that supports SAN with SSL. For more information, see the MariaDB Connector/J download page.
+
+The public key is stored at https://s3.amazonaws.com/rds-downloads/rds-combined-ca-bundle.pem.
+
+To encrypt connections using the default mysql client, launch the mysql client using the --ssl-ca parameter to reference the public key, for example:
+
+mysql -h mycluster-primary.123456789012.us-east-1.rds.amazonaws.com --ssl-ca=[full path]rds-combined-ca-bundle.pem --ssl-verify-server-cert
+
+You can use the GRANT statement to require SSL connections for specific users accounts. For example, you can use the following statement to require SSL connections on the user account encrypted_user.
+
+GRANT USAGE ON *.* TO 'encrypted_user'@'%' REQUIRE SSL
 
 ## rails
 create secret key and add env variable to eb (SECRET_KEY_BASE) on AWS EB Console
