@@ -74,7 +74,14 @@ mysql -h mycluster-primary.123456789012.us-east-1.rds.amazonaws.com --ssl-ca=[fu
 
 You can use the GRANT statement to require SSL connections for specific users accounts. For example, you can use the following statement to require SSL connections on the user account encrypted_user.
 
-GRANT USAGE ON *.* TO 'encrypted_user'@'%' REQUIRE SSL
+```
+mysql> GRANT USAGE ON *.* TO 'encrypted_user'@'%' REQUIRE SSL
+```
+
+You can access the rds server throught ssl
+```
+$ mysql -h mycluster-primary.123456789012.us-east-1.rds.amazonaws.com --ssl-ca=[full path]rds-combined-ca-bundle.pem --ssl-verify-server-cert
+```
 
 ## rails
 create secret key and add env variable to eb (SECRET_KEY_BASE) on AWS EB Console
