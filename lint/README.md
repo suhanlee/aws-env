@@ -1,5 +1,9 @@
 # Javascript lint configuration
 ## airbnb, react, jest
+Install eslint and plugin packages.
+```
+$ sudo npm install -g eslint eslint-config-airbnb-base eslint-config-react eslint-plugin-import eslint-plugin-jest eslint-plugin-react
+```
 `package.json`
 
 ```
